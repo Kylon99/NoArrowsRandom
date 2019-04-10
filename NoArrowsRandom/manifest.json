@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nike4613/ModSaber-MetadataFileSchema/master/Schema.json",
+  "author": "Kylon99",
+  "description": "Randomized NoArrows from previous versions of the game!",
+  "features": [],
+  "gameVersion": "0.13.2",
+  "id": "noarrowsrandom",
+  "name": "NoArrowsRandom",
+  "version": "1.0.0"
+}
