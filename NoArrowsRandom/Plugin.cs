@@ -1,7 +1,6 @@
 ﻿using BS_Utils.Utilities;
 using IPA;
 using IPA.Config;
-using SongLoaderPlugin.OverrideClasses;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
