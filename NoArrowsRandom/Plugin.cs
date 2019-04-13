@@ -1,7 +1,4 @@
-﻿using BS_Utils.Utilities;
-using IPA;
-using IPA.Config;
-using System.Linq;
+﻿using IPA;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +12,7 @@ namespace NoArrowsRandom
         private NoArrowsRandom noArrowsRandom;
 
         public string Name => NoArrowsRandom.Name;
-        public string Version => "1.0.0";
+        public string Version => "1.0.1";
 
         public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
         {
@@ -32,7 +29,6 @@ namespace NoArrowsRandom
         public void OnApplicationStart()
         {
             noArrowsRandom = new GameObject("NoArrowsRandom").AddComponent<NoArrowsRandom>();
-            noArrowsRandom.Init();
         }
 
         public void OnFixedUpdate()

@@ -1,7 +1,6 @@
 ﻿using CustomUI.GameplaySettings;
 using CustomUI.Utilities;
 using IPA.Config;
-using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
@@ -18,7 +17,10 @@ namespace NoArrowsRandom
         /// </summary>
         public bool NoArrowsOption { get; private set; }
 
-        public void Init()
+        /// <summary>
+        /// Called before Start or Updates by Unity infrastructure
+        /// </summary>
+        public void Awake()
         {
             NoArrowsOption = ModPrefs.GetBool(Name, Option, false, true);
         }
@@ -35,7 +37,7 @@ namespace NoArrowsRandom
                 "Turn every song into the classic randomized No Arrows mode.",
                 noArrowsIcon);
 
-            noArrowsRandomOption.GetValue = false;
+            noArrowsRandomOption.GetValue = NoArrowsOption;
             noArrowsRandomOption.AddConflict("No Arrows");
             noArrowsRandomOption.OnToggle += OnNoArrowsRandomOptionToggle;
         }
@@ -50,8 +52,8 @@ namespace NoArrowsRandom
             {
                 GameplayCoreSceneSetupData data = BS_Utils.Plugin.LevelData?.GameplayCoreSceneSetupData;
                 var beatmap = data.difficultyBeatmap;
+
                 string characteristic = beatmap.parentDifficultyBeatmapSet.beatmapCharacteristic.characteristicName;
-             //   Logging.Info($"Characteristic: {characteristic}");
                 if (characteristic == ("One Saber") || characteristic == ("No Arrows"))
                 {
                     // Do not transform for One Saber or legitimate No Arrows mode
