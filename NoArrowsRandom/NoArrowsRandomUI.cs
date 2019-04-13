@@ -1,7 +1,6 @@
 ﻿using CustomUI.GameplaySettings;
 using CustomUI.Utilities;
 using IPA.Config;
-using SongLoaderPlugin.OverrideClasses;
 using System;
 using System.Collections;
 using System.Linq;
@@ -50,15 +49,13 @@ namespace NoArrowsRandom
             if (this.NoArrowsOption && BS_Utils.Plugin.LevelData.IsSet)
             {
                 GameplayCoreSceneSetupData data = BS_Utils.Plugin.LevelData?.GameplayCoreSceneSetupData;
-                var beatmap = data.difficultyBeatmap as CustomLevel.CustomDifficultyBeatmap;
-
-                if (beatmap == null) yield break; // Possibly not a custom map so abort
-
-                var charactersticList = beatmap.customLevel.beatmapCharacteristics.Select(c => c.characteristicName).ToList();
-                if (charactersticList.Contains("One Saber") || charactersticList.Contains("No Arrows"))
+                var beatmap = data.difficultyBeatmap;
+                string characteristic = beatmap.parentDifficultyBeatmapSet.beatmapCharacteristic.characteristicName;
+             //   Logging.Info($"Characteristic: {characteristic}");
+                if (characteristic == ("One Saber") || characteristic == ("No Arrows"))
                 {
                     // Do not transform for One Saber or legitimate No Arrows mode
-                    Logging.Info($"Cannot transform song: {SongLoaderPlugin.SongLoader.CurrentLevelPlaying.customLevel.songName} in {String.Join(", ", charactersticList)} mode.");
+                    Logging.Info($"Cannot transform song: {beatmap.level.songName} due to being a One Saber or No Arrows map");
                     yield break;
                 }
 
@@ -69,7 +66,7 @@ namespace NoArrowsRandom
                 if (gameplayCore == null) yield break;
 
                 // Applying NoArrowsRandom transformation
-                Logging.Info($"Transforming song: {beatmap.customLevel.songName}");
+                Logging.Info($"Transforming song: {beatmap.level.songName}");
                 var transformedBeatmap = BeatmapDataNoArrowsTransform.CreateTransformedData(beatmap.beatmapData, true);
                 var beatmapDataModel = gameplayCore.GetPrivateField<BeatmapDataModel>("_beatmapDataModel");
                 beatmapDataModel.SetPrivateField("_beatmapData", transformedBeatmap);
