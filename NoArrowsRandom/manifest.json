@@ -3,8 +3,8 @@
   "author": "Kylon99",
   "description": "Randomized NoArrows from previous versions of the game!",
   "features": [],
-  "gameVersion": "0.13.2",
+  "gameVersion": "1.0.0",
   "id": "noarrowsrandom",
   "name": "NoArrowsRandom",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
