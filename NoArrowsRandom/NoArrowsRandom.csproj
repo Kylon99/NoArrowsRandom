@@ -75,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logging.cs" />
-    <Compile Include="NoArrowsRandomUI.cs" />
+    <Compile Include="NoArrowsRandom.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
