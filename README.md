@@ -17,9 +17,13 @@ This mod depends on the following mods.  Download them at [BeatMods](https://bea
 Drop the NoArrowsRandom.dll file into your Plugins folder under your BeatSaber folder.
 
 ## Changelog
+
+### 1.0.4
+* Updated manifest to indicate support for Beat Saber 1.3.0
+
 ### 1.0.3
 * Updated manifest to indicate support for Beat Saber 1.1.0
-* Fixed modifers conflict hover message
+* Fixed modifers conflict hover tooltip
 * Fixed prevention of transform on One Saber and No Arrows (mode) due to new localization strings
 
 ### 1.0.2

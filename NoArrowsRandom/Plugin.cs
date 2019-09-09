@@ -12,7 +12,7 @@ namespace NoArrowsRandom
         private NoArrowsRandom noArrowsRandom;
 
         public string Name => NoArrowsRandom.Name;
-        public string Version => "1.0.3";
+        public string Version => "1.0.4";
 
         public void OnActiveSceneChanged(Scene prevScene, Scene nextScene)
         {
