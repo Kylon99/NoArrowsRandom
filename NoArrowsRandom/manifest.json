@@ -4,7 +4,17 @@
   "description": "Randomized NoArrows from previous versions of the game!",
   "features": [],
   "gameVersion": "1.3.0",
+  "icon": "NoArrowsRandom.Resources.NoArrowsRandomColored.png",
   "id": "noarrowsrandom",
   "name": "NoArrowsRandom",
-  "version": "1.0.4"
+  "version": "1.0.4",
+  "dependsOn": {
+    "BSIPA": "^3.13.2",
+    "CustomUI": "^1.6.0",
+    "BS Utils": "^1.3.5"
+  },
+  "links": {
+    "project-home": "https://github.com/Kylon99/NoArrowsRandom",
+    "project-source": "https://github.com/Kylon99/NoArrowsRandom/tree/master/NoArrowsRandom"
+  }
 }

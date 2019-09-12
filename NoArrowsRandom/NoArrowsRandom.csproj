@@ -88,6 +88,8 @@
   <ItemGroup>
     <Content Include="Resources\NoArrowsRandom.svg" />
     <Content Include="Resources\NoArrowsRandom64.png" />
+    <EmbeddedResource Include="Resources\NoArrowsRandomColored.png" />
+    <Content Include="Resources\NoArrowsRandomColored.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
