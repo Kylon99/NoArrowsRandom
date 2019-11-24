@@ -3,15 +3,15 @@
   "author": "Kylon99",
   "description": "Randomized NoArrows from previous versions of the game!",
   "features": [],
-  "gameVersion": "1.3.0",
+  "gameVersion": "1.5.0",
   "icon": "NoArrowsRandom.Resources.NoArrowsRandomColored.png",
   "id": "noarrowsrandom",
   "name": "NoArrowsRandom",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "dependsOn": {
     "BSIPA": "^3.13.2",
-    "CustomUI": "^1.6.0",
-    "BS Utils": "^1.3.5"
+    "CustomUI": "^1.7.1",
+    "BS Utils": "^1.3.7"
   },
   "links": {
     "project-home": "https://github.com/Kylon99/NoArrowsRandom",

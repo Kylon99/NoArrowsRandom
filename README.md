@@ -18,6 +18,10 @@ Drop the NoArrowsRandom.dll file into your Plugins folder under your BeatSaber f
 
 ## Changelog
 
+### 1.0.5
+* Updated manifest to indicate support for Beat Saber 1.5.0
+* Modified icon for better visibility
+
 ### 1.0.4
 * Updated manifest to indicate support for Beat Saber 1.3.0
 * Added new icons for BS Mod List
